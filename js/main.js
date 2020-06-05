@@ -21,20 +21,20 @@ function voltar(elemento){
 elemento.innerHTML = "Passe o mouse aqui"
 }
 
-/*function imprimirAzul4(){
+function imprimirAzul4(){
     for (var i=1; i<=4; i++){
         console.log('Azul');
     }
 }
-imprimirAzul4();
+//imprimirAzul4();
 
 function imprimirAzul (x){
     for (let i = 1; i<= x; i++){
         console.log("Azul");
     }
 }
- imprimirAzul(3)/
- var pares = 0;
+// imprimirAzul(3)/
+var pares = 0;
 function somaDosPares(x){
      for (let i = 1; i<=x; i++){
          if (i%2 == 0){
@@ -43,7 +43,7 @@ function somaDosPares(x){
      }
      return pares;
  }
- console.log(somaDosPares(10));
+// console.log(somaDosPares(10));
  
 function mover (n1,n2){
     i = n1.pop();
@@ -74,7 +74,8 @@ function medalhaDeAcordoComPosto(numero){
         console.log(postoChegada[numero]);
     }
 }
-medalhaDeAcordoComPosto(1)*
+//medalhaDeAcordoComPosto(1)
+
 function lucroTotal(umPeriodo) {
     var soma= 0;
     var mes = 0;
@@ -84,11 +85,11 @@ function lucroTotal(umPeriodo) {
     }
     return soma;
   }
-console.log(lucroTotal([]));
-console.log(lucroTotal([100]));
-console.log(lucroTotal([100, 2]));
-console.log(lucroTotal([2, 10, -20]))
-console.log(lucroTotal([2, 10, -20, 0, 0, 10, 10]));
+//console.log(lucroTotal([]));
+//console.log(lucroTotal([100]));
+//console.log(lucroTotal([100, 2]));
+//console.log(lucroTotal([2, 10, -20]))
+//console.log(lucroTotal([2, 10, -20, 0, 0, 10, 10]));
 
 function quantidadeDeMesesComLucro(umPeriodo) {
     let quantidade = 0;
@@ -118,7 +119,6 @@ return quantidade
 
 function fatorial (f1){
     let numeroFatorial = 1;
-    //let stored = [];
     if (f1 > 0){
         for (let i = 1; i <= f1; i++){
             numeroFatorial *= i;
@@ -146,7 +146,6 @@ function maisMenos (n1){
             nNegative++
         }
     }
-    //aux = nPositive / contador;
     nFran.push(nPositive/contador);
     nFran.push(nZero/contador);
     nFran.push(nNegative/contador);
@@ -165,4 +164,49 @@ function escada (n1){
         }
     return theMission;
 }
-console.log(escada(5))
+//console.log(escada(5))
+
+function alturaArvoreUtopica (n1){
+    let cicloArvorePlantada = 1;
+    let cicloN = 0;
+    for (i = 1; i <= n1; i++){
+        if (i%2 == 0){
+            cicloArvorePlantada = cicloArvorePlantada + 1            
+        }else{
+            cicloArvorePlantada = cicloArvorePlantada * 2;
+        }
+    }
+    return cicloArvorePlantada;
+}
+//console.log(alturaArvoreUtopica(0));
+var alunosDaSegunda = [10, -5, 3, 0];
+var alunosDaTerça = [0, 10, 15, -4]
+var alunosDaQuarta = [2, 0, -3, -20]
+
+function acontece (diaSemana,minimoEstudades){
+    let contador = 0;
+    let aulaMarcada = true;
+    for (let i = 0; i< diaSemana.length;i++){
+        if (diaSemana[i]<=0) {
+            contador ++ //= contador + 1
+        }
+    }
+    if (contador >= minimoEstudades){
+        return aulaMarcada = true;
+    }else{
+        return aulaMarcada = false
+    }
+}
+console.log(acontece(alunosDaSegunda, 2));
+
+function aberturas(diaSemana,minimoEstudades){
+    let aerturaArray = [];
+    let aux = false
+    for (let i = 0; i<diaSemana.length;i++){
+        aux = acontece(diaSemana[i],minimoEstudades);
+        aerturaArray.push(aux);
+    }
+    return aerturaArray;
+}
+
+console.log(aberturas([alunosDaSegunda, alunosDaTerça, alunosDaQuarta], 3));
